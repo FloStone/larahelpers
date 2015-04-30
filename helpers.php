@@ -63,3 +63,30 @@ if ( ! function_exists('user'))
 		return app('auth')->user();
 	}
 }
+
+if ( ! function_exists('login'))
+{
+	/**
+	 * Attempt to login a user
+	 *
+	 * @param array $creadentials
+	 * @return void
+	 */
+	function login(array $credentials)
+	{
+		return app('auth')->attempt($credentials);
+	}
+}
+
+if ( ! function_exists('logout'))
+{
+	/**
+	 * Logout the current user
+	 *
+	 * @return void
+	 */
+	function logout()
+	{
+		return app('auth')->logout();
+	}
+}
