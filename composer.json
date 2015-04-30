@@ -1,0 +1,21 @@
+{
+    "name": "flo5581/larahelpers",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Flo5581",
+            "email": "mail@flo5581.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/http": "~5.0",
+        "illuminate/session": "~5.0",
+        "illuminate/support": "~5.0"
+    },
+    "autoload": {
+        "files": [
+            "helpers.php"
+        ]
+    }
+}
