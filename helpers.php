@@ -60,6 +60,6 @@ if ( ! function_exists('user'))
 	 */
 	function user()
 	{
-		return app('guard')->user();
+		return app('auth')->user();
 	}
 }
