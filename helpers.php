@@ -10,14 +10,14 @@ if ( ! function_exists('controller'))
  	 * @param array $names
  	 * @return void
  	 */   
-    function controller($uri, $controller, $names = [])
-    {
-        return app('router')->controller($uri, $controller, $names);
-    }
-}
+ 	function controller($uri, $controller, $names = [])
+ 	{
+ 		return app('router')->controller($uri, $controller, $names);
+ 	}
+ }
 
-if ( ! function_exists('controllers'))
-{
+ if ( ! function_exists('controllers'))
+ {
 	/**
 	 * Add multiple controllers to routes
 	 *
@@ -42,17 +42,22 @@ if ( ! function_exists('input'))
 	{
 		if (is_null($name))
 		{
-			return \Input::all();
+			return app('request')->all();
 		}
 		else
 		{
-			return \Input::get($name);
+			return app('request')->get($name);
 		}
 	}
 }
 
 if ( ! function_exists('user'))
 {
+	/**
+	 * Get the current logged in user
+	 *
+	 * @return void
+	 */
 	function user()
 	{
 		return app('guard')->user();

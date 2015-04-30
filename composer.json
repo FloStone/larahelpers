@@ -15,7 +15,8 @@
     },
     "autoload": {
         "files": [
-            "helpers.php"
+            "helpers.php",
+            "functions.php"
         ]
     }
 }
