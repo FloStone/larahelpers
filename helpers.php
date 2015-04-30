@@ -29,3 +29,17 @@ if ( ! function_exists('controllers'))
 		return app('router')->controllers($controllers);
 	}
 }
+
+if ( ! function_exists('input'))
+{
+	/**
+	 * Add multiple controllers to routes
+	 *
+	 * @param array $controllers
+	 * @return void
+	 */
+	function input($name)
+	{
+		return \Input::get($name);
+	}
+}
