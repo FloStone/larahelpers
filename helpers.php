@@ -33,13 +33,28 @@ if ( ! function_exists('controllers'))
 if ( ! function_exists('input'))
 {
 	/**
-	 * Add multiple controllers to routes
+	 * Retreive the input of a form
 	 *
-	 * @param array $controllers
+	 * @param string $name
 	 * @return void
 	 */
-	function input($name)
+	function input($name = null)
 	{
-		return \Input::get($name);
+		if (is_null($name))
+		{
+			return \Input::all();
+		}
+		else
+		{
+			return \Input::get($name);
+		}
+	}
+}
+
+if ( ! function_exists('user'))
+{
+	function user()
+	{
+		return app('guard')->user();
 	}
 }
