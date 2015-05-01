@@ -7,7 +7,7 @@ controller()      ->  Similar to Route::controller()<br>
 controllers()     ->  Similar to Route::controllers()<br>
 input()           ->  Similar to Input::get(), Input::all() (if no value is set)<br>
 user()            ->  Similar to Auth::user()<br>
-login()           ->  Similar to Aut::login()<br>
+login()           ->  Similar to Auth::login()<br>
 logout()          ->  Similar to Auth::logout()<br>
 
 
