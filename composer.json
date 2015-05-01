@@ -16,8 +16,7 @@
     "autoload": {
         "files": [
             "helpers.php",
-            "functions.php",
-            "blade.php"
+            "functions.php"
         ]
     }
 }
