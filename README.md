@@ -5,6 +5,7 @@ Laravel functions and definitions:
 
 controller()      ->  Similar to Route::controller()<br>
 controllers()     ->  Similar to Route::controllers()<br>
+group()           ->  Similar to Route::group()<br>
 input()           ->  Similar to Input::get(), Input::all() (if no value is set)<br>
 user()            ->  Similar to Auth::user()<br>
 login()           ->  Similar to Auth::login()<br>
