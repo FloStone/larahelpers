@@ -30,6 +30,20 @@ if ( ! function_exists('controller'))
 	}
 }
 
+if ( ! function_exists('group'))
+{
+	/**
+	 * Create a route group
+	 *
+	 * @param array $attributes
+	 * @param Closure $callback
+	 */
+	function group(array $attributes, $callback)
+	{
+		return app('router')->group($attributes, $callback);
+	}
+}
+
 if ( ! function_exists('input'))
 {
 	/**
