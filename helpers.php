@@ -10,7 +10,7 @@ if ( ! function_exists('controller'))
  	 * @param array $names
  	 * @return void
  	 */   
- 	function controller($uri, $controller, $names = [])
+ 	function controller(string $uri, string $controller, array $names = array())
  	{
  		return app('router')->controller($uri, $controller, $names);
  	}
@@ -52,7 +52,7 @@ if ( ! function_exists('input'))
 	 * @param string $name
 	 * @return void
 	 */
-	function input($name = null)
+	function input(string $name = null)
 	{
 		if (is_null($name))
 		{
