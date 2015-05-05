@@ -10,7 +10,7 @@ if ( ! function_exists('controller'))
  	 * @param array $names
  	 * @return void
  	 */   
- 	function controller(string $uri, string $controller, array $names = array())
+ 	function controller($uri, $controller, $names = [])
  	{
  		return app('router')->controller($uri, $controller, $names);
  	}
@@ -38,7 +38,7 @@ if ( ! function_exists('group'))
 	 * @param array $attributes
 	 * @param Closure $callback
 	 */
-	function group(array $attributes, $callback)
+	function group($attributes, $callback)
 	{
 		return app('router')->group($attributes, $callback);
 	}
@@ -52,7 +52,7 @@ if ( ! function_exists('input'))
 	 * @param string $name
 	 * @return void
 	 */
-	function input(string $name = null)
+	function input($name = null)
 	{
 		if (is_null($name))
 		{
