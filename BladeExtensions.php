@@ -1,4 +1,4 @@
-<?php namespace App\Providers;
+<?php namespace Flo5581\Larahelpers;
 
 use Illuminate\Support\ServiceProvider;
 use Blade;
