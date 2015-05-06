@@ -15,3 +15,9 @@ logout()          ->  Similar to Auth::logout()<br>
 New functions and definitions:
 
 days_in_month() -> Calculates days in a month, accepts parameter 1: month (int), parameter 2: year (int)
+
+
+Blade extensions:
+
+@use(path)    ->  similar to phps use, no semicolon needed, example @use(App\Models\User)
+@php()        ->  plain php coding inside brackets, example @php(echo 'hi';)
