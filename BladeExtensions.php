@@ -16,7 +16,10 @@ class BladeExtenderServiceProvider extends ServiceProvider {
 			return preg_replace('/\@use\((.+)\)/', '<?php use ${1}; ?>', $view);
 		});
 		Blade::extend(function($view){
-			return preg_replace('/\@php\((.+)\)/', '<?php ${1} ?>', $view);
+			return preg_replace('/\@php\((.+)\)/', '<?php', $view);
+		});
+		Blade::extend(function($view){
+			return preg_replace('/\@endphp\((.+)\)/', '?>', $view);
 		});
 	}
 
