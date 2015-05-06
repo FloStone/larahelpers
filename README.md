@@ -19,5 +19,5 @@ days_in_month() -> Calculates days in a month, accepts parameter 1: month (int),
 
 Blade extensions:
 
-@use(path)    ->  similar to phps use, no semicolon needed, example @use(App\Models\User)
+@use(path)    ->  similar to phps use, no semicolon needed, example @use(App\Models\User)<br>
 @php()        ->  plain php coding inside brackets, example @php(echo 'hi';)
