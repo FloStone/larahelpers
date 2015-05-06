@@ -1,6 +1,10 @@
 # larahelpers
 Some custom helpers for laravel 5
 
+Register Service Provider in app.php:
+
+'Flo5581\Larahelpers\BladeExtensions'
+
 Laravel functions and definitions:
 
 controller()      ->  Similar to Route::controller()<br>
