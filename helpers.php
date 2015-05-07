@@ -14,10 +14,10 @@ if ( ! function_exists('controller'))
  	{
  		return app('router')->controller($uri, $controller, $names);
  	}
- }
+}
 
- if ( ! function_exists('controllers'))
- {
+if ( ! function_exists('controllers'))
+{
 	/**
 	 * Add multiple controllers to routes
 	 *
@@ -41,6 +41,42 @@ if ( ! function_exists('group'))
 	function group($attributes, $callback)
 	{
 		return app('router')->group($attributes, $callback);
+	}
+}
+
+if ( ! function_exists('get_routes'))
+{
+	/**
+	 * Finally, get multiple GET routes in an array
+	 * Works with actions and functions
+	 * 
+	 * @param array $routes
+	 * @return void
+	 */
+	function get_routes(array $routes)
+	{
+		foreach ($routes as $route => $action)
+		{
+			app('router')->get($route, $action);
+		}
+	}
+}
+
+if ( ! function_exists('post_routes'))
+{
+	/**
+	 * Finally, get multiple POST routes in an array
+	 * Works with actions and functions
+	 * 
+	 * @param array $routes
+	 * @return void
+	 */
+	function post_routes(array $routes)
+	{
+		foreach ($routes as $route => $action)
+		{
+			app('router')->post($route, $action);
+		}
 	}
 }
 
@@ -94,7 +130,7 @@ if ( ! function_exists('login'))
 		elseif (is_int($credentials))
 			app('auth')->loginUsingId( $credentials );
 		else
-			return app('auth')->attempt($credentials);
+			return app('auth')->attempt( $credentials );
 	}
 }
 
@@ -105,7 +141,7 @@ if ( ! function_exists('check_auth'))
 	 *
 	 * @return void
 	 */
-	function check_auth()
+	function check()
 	{
 		return app('auth')->check();
 	}

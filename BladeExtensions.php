@@ -3,7 +3,7 @@
 use Illuminate\Support\ServiceProvider;
 use Blade;
 
-class BladeExtenderServiceProvider extends ServiceProvider {
+class BladeExtensions extends ServiceProvider {
 
 	/**
 	 * Bootstrap the application services.
@@ -16,10 +16,22 @@ class BladeExtenderServiceProvider extends ServiceProvider {
 			return preg_replace('/\@use\((.+)\)/', '<?php use ${1}; ?>', $view);
 		});
 		Blade::extend(function($view){
-			return preg_replace('/\@php\((.+)\)/', '<?php', $view);
+			return preg_replace('/\@define\((.+)\)/', '<?php ${1}; ?>', $view);
 		});
 		Blade::extend(function($view){
-			return preg_replace('/\@endphp\((.+)\)/', '?>', $view);
+			return preg_replace('/\@echo\((.+)\)/', '<?php echo ${1}; ?>', $view);
+		});
+		Blade::extend(function($view){
+			return preg_replace('/\@print\((.+)\)/', '<?php print_r( ${1} ); ?>', $view);
+		});
+		Blade::extend(function($view){
+			return preg_replace('/\@dd\((.+)\)/', '<?php dd( ${1} ); ?>', $view);
+		});
+		Blade::extend(function($view){
+			return preg_replace('/\@php/', '<?php', $view);
+		});
+		Blade::extend(function($view){
+			return preg_replace('/\@endphp/', '?>', $view);
 		});
 	}
 
