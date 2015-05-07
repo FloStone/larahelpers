@@ -5,7 +5,7 @@ Register Service Provider in app.php:
 
 'Flo5581\Larahelpers\BladeExtensions'
 
-##Laravel functions and definitions:
+###Laravel functions and definitions:
 
 `controller()`      ->  Similar to `Route::controller()`<br>
 `controllers()`     ->  Similar to `Route::controllers()`<br>
@@ -23,12 +23,12 @@ example: `login(['email' => $email, 'password' => $password])`, `login($user)`, 
 `check()`			  ->  Similar to `Auth::check()`<br>
 
 
-##New functions and definitions:
+###New functions and definitions:
 
 `days_in_month($month, $year)` -> Calculates days in a month, accepts parameter 1: month (int), parameter 2: year (int)<br>
 `num_to_word($number)`		 -> Converts a number into words<br>
 
-##Blade extensions:
+###Blade extensions:
 
 `@use(path)`    		->  similar to phps use, no semicolon needed, example: `@use(App\Models\User)`<br>
 `@define(code)`       ->  define variables inside blade, example: `@define($i = 1)`<br>
