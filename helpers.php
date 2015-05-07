@@ -82,13 +82,17 @@ if ( ! function_exists('login'))
 {
 	/**
 	 * Attempt to login a user
+	 * Attempt with input array or model
 	 *
 	 * @param array $creadentials
 	 * @return void
 	 */
-	function login(array $credentials)
+	function login($credentials)
 	{
-		return app('auth')->attempt($credentials);
+		if ($credentials instanceof Illuminate\Database\Eloquent\Model)
+			return app('auth')->loginUsingId( $credentials->id )
+		else
+			return app('auth')->attempt($credentials);
 	}
 }
 
