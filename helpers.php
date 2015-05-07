@@ -98,6 +98,19 @@ if ( ! function_exists('login'))
 	}
 }
 
+if ( ! function_exists('check_auth'))
+{
+	/**
+	 * Check if a user is logged in
+	 *
+	 * @return void
+	 */
+	function check_auth()
+	{
+		return app('auth')->check();
+	}
+}
+
 if ( ! function_exists('logout'))
 {
 	/**
