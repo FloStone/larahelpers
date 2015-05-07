@@ -16,7 +16,9 @@ example: `get_routes(['/' => function(){return view('index');}, 'test' => 'TestC
 `group()`           ->  Similar to `Route::group()`<br>
 `input()`           ->  Similar to `Input::get()`, `Input::all()` (if no value is set)<br>
 `user()`            ->  Similar to `Auth::user()`<br>
-`login()`           ->  Similar to `Auth::login()` or `Auth::loginUsingId()` if a User Model or ID is given, example: login($user), login(1)<br>
+`login()`           ->  Similar to `Auth::login()` or `Auth::loginUsingId()` if a User Model or ID is given,<br>
+example: login(['email' => $email, 'password' => $password]), login($user), login(1)<br>
+
 `logout()`          ->  Similar to `Auth::logout()`<br>
 `check()`			  ->  Similar to `Auth::check()`<br>
 
