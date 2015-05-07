@@ -1,5 +1,7 @@
-# larahelpers
-Some custom helpers for laravel 5
+# Larahelpers
+Some custom helpers and functions for Laravel 5
+
+##Installation
 
 Register Service Provider in app.php:
 
