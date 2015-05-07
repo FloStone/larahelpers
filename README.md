@@ -34,4 +34,3 @@ Blade extensions:
 `@print(var)`			->	print out stuff, example `@print($array)`<br>
 `@dd(var)`		->	similar to `dd()`, example: `@dd($user)`<br>
 `@php, @endphp`		->	basically open and close php tags, example: `@php echo 'hi'; @endphp`<br>
-d
