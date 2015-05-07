@@ -10,9 +10,9 @@ Laravel functions and definitions:
 `controller()`      ->  Similar to `Route::controller()`<br>
 `controllers()`     ->  Similar to `Route::controllers()`<br>
 `get\_routes()`	  ->  Register multiple GET routes in an array,<br>
-example: `get_routes(['/' => function(){return view('index');}, 'test' => 'TestController@index']);`
+example: `get_routes(['/' => function(){return view('index');}, 'test' => 'TestController@index']);`<br>
 
-`post\_routes()`	  ->  Same as `get_routes()` but with POST requests instead
+`post\_routes()`	  ->  Same as `get_routes()` but with POST requests instead<br>
 `group()`           ->  Similar to `Route::group()`<br>
 `input()`           ->  Similar to `Input::get()`, `Input::all()` (if no value is set)<br>
 `user()`            ->  Similar to `Auth::user()`<br>
