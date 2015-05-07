@@ -90,7 +90,7 @@ if ( ! function_exists('login'))
 	function login($credentials)
 	{
 		if ($credentials instanceof Illuminate\Database\Eloquent\Model)
-			return app('auth')->loginUsingId( $credentials->id )
+			return app('auth')->loginUsingId( $credentials->id );
 		else
 			return app('auth')->attempt($credentials);
 	}
