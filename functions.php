@@ -82,7 +82,7 @@ if ( ! function_exists('num_to_word'))
 		}
 
 		if ($number < 0) {
-			return $negative . Helper::num_to_word(abs($number));
+			return $negative . num_to_word(abs($number));
 		}
 
 		$string = $fraction = null;
@@ -108,17 +108,17 @@ if ( ! function_exists('num_to_word'))
 			$remainder = $number % 100;
 			$string = $dictionary[$hundreds] . ' ' . $dictionary[100];
 			if ($remainder) {
-				$string .= $conjunction . Helper::num_to_word($remainder);
+				$string .= $conjunction . num_to_word($remainder);
 			}
 			break;
 			default:
 			$baseUnit = pow(1000, floor(log($number, 1000)));
 			$numBaseUnits = (int) ($number / $baseUnit);
 			$remainder = $number % $baseUnit;
-			$string = Helper::num_to_word($numBaseUnits) . ' ' . $dictionary[$baseUnit];
+			$string = num_to_word($numBaseUnits) . ' ' . $dictionary[$baseUnit];
 			if ($remainder) {
 				$string .= $remainder < 100 ? $conjunction : $separator;
-				$string .= Helper::num_to_word($remainder);
+				$string .= num_to_word($remainder);
 			}
 			break;
 		}
