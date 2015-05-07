@@ -9,10 +9,10 @@ Laravel functions and definitions:
 
 `controller()`      ->  Similar to `Route::controller()`<br>
 `controllers()`     ->  Similar to `Route::controllers()`<br>
-`get\_routes()`	  ->  Register multiple GET routes in an array,<br>
+`get_routes()`	  ->  Register multiple GET routes in an array,<br>
 example: `get_routes(['/' => function(){return view('index');}, 'test' => 'TestController@index']);`<br>
 
-`post\_routes()`	  ->  Same as `get_routes()` but with POST requests instead<br>
+`post_routes()`	  ->  Same as `get_routes()` but with POST requests instead<br>
 `group()`           ->  Similar to `Route::group()`<br>
 `input()`           ->  Similar to `Input::get()`, `Input::all()` (if no value is set)<br>
 `user()`            ->  Similar to `Auth::user()`<br>
@@ -25,8 +25,8 @@ example: `login(['email' => $email, 'password' => $password])`, `login($user)`, 
 
 New functions and definitions:
 
-`days\_in_month($month, $year)` -> Calculates days in a month, accepts parameter 1: month (int), parameter 2: year (int)<br>
-`num\_to_word($number)`		 -> Converts a number into words<br>
+`days_in_month($month, $year)` -> Calculates days in a month, accepts parameter 1: month (int), parameter 2: year (int)<br>
+`num_to_word($number)`		 -> Converts a number into words<br>
 
 Blade extensions:
 
