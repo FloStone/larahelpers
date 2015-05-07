@@ -34,7 +34,7 @@ example: `login(['email' => $email, 'password' => $password])`, `login($user)`, 
 
 ####Blade extensions:
 
-`@use(path)`    		->  similar to phps use, no semicolon needed, example: `@use(App\Models\User)`<br>
+`@use(path)`    		->  similar to phps use, example: `@use(App\Models\User)`<br>
 `@define(code)`       ->  define variables inside blade, example: `@define($i = 1)`<br>
 `@echo(string)`		->	echo out stuff, example `@echo('hi')`<br>
 `@print(var)`			->	print out stuff, example `@print($array)`<br>
