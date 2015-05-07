@@ -91,6 +91,8 @@ if ( ! function_exists('login'))
 	{
 		if ($credentials instanceof Illuminate\Database\Eloquent\Model)
 			return app('auth')->loginUsingId( $credentials->id );
+		elseif (is_int($credentials))
+			app('auth')->loginUsingId( $credentials );
 		else
 			return app('auth')->attempt($credentials);
 	}
