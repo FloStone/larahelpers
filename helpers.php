@@ -148,7 +148,7 @@ if ( ! function_exists('login'))
 	}
 }
 
-if ( ! function_exists('check_auth'))
+if ( ! function_exists('check'))
 {
 	/**
 	 * Check if a user is logged in
