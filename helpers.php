@@ -30,6 +30,20 @@ if ( ! function_exists('controllers'))
 	}
 }
 
+if ( ! function_exists('resources'))
+{
+	/**
+	 * Add multiple resources to routes
+	 *
+	 * @param array $resources
+	 * @return void
+	 */
+	function resources(array $resources)
+	{
+		return app('router')->resources($resources);
+	}
+}
+
 if ( ! function_exists('group'))
 {
 	/**
