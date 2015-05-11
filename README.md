@@ -3,9 +3,13 @@ Some custom helpers and functions for Laravel 5
 
 ##Installation
 
+Require the package in composer:
+
+`composer require flo5581/larahelpers dev-master`
+
 Register Service Provider in app.php:
 
-'Flo5581\Larahelpers\BladeExtensions'
+`'Flo5581\Larahelpers\BladeExtensions'`
 
 ##Features
 
