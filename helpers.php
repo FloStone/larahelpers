@@ -1,6 +1,34 @@
 <?php
 
 
+if (! function_exists('get'))
+{
+	/**
+	 * Add a get action to routes
+	 *
+	 * @param string $uri
+	 * @param string|Closure $action
+	 */
+	function get($uri, $action)
+	{
+		return app('router')->get($uri, $action);
+	}
+}
+
+if (! function_exists('post'))
+{
+	/**
+	 * Add a post action to routes
+	 *
+	 * @param string $uri
+	 * @param string|Closure $action
+	 */
+	function get($uri, $action)
+	{
+		return app('router')->post($uri, $action);
+	}
+}
+
 if ( ! function_exists('controller'))
 {
  	/**
@@ -10,7 +38,7 @@ if ( ! function_exists('controller'))
  	 * @param string $controller
  	 * @param array $names
  	 * @return void
- 	 */   
+ 	 */
  	function controller($uri, $controller, $names = [])
  	{
  		return app('router')->controller($uri, $controller, $names);
@@ -64,7 +92,7 @@ if ( ! function_exists('get_routes'))
 	/**
 	 * Finally, get multiple GET routes in an array
 	 * Works with actions and functions
-	 * 
+	 *
 	 * @param array $routes
 	 * @return void
 	 */
@@ -82,7 +110,7 @@ if ( ! function_exists('post_routes'))
 	/**
 	 * Finally, get multiple POST routes in an array
 	 * Works with actions and functions
-	 * 
+	 *
 	 * @param array $routes
 	 * @return void
 	 */
@@ -135,7 +163,7 @@ if ( ! function_exists('login'))
 	 * Attempt to login a user
 	 * Attempt with input array or model
 	 *
-	 * @param array $creadentials
+	 * @param array|Model|id $creadentials
 	 * @return void
 	 */
 	function login($credentials)
