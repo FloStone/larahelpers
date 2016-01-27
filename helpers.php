@@ -23,7 +23,7 @@ if (! function_exists('post'))
 	 * @param string $uri
 	 * @param string|Closure $action
 	 */
-	function get($uri, $action)
+	function post($uri, $action)
 	{
 		return app('router')->post($uri, $action);
 	}
